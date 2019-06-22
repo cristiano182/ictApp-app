@@ -7,9 +7,10 @@ Aplicativo para compartilhamento de arquivos entre alunos da Unifesp
 # Sobre este projeto
 A ideia do aplicativo é:
 
-"Replicar um modelo de pagina que existe no facebook, onde alunos de forma anonima  interagem entre si".
+"Possibilitar compartilhamento de arquivos, listas de exercicios, livros em formato pdf images etc, entre alunos da ICT-UNIFESP".
 
-PS: Todo o código pode ser reutilizado para qualquer outro aplicativo que reproduz salas de chat, como foi utilizado WebSockets você pode reutilizar para qualquer outra ideia dentro deste contexto!
+PS: Todo o código pode ser reutilizado para qualquer outro aplicativo que reproduz salas de chat, upload de arquivos(fotos, videos),
+você pode reutilizar para qualquer outra ideia dentro deste contexto!
 
 # Porque?
 Este projeto faz parte do meu portfolio pessoal, por isso, é um projeto que pode ter qualquer comentário sobre o projeto, código, estrutura ou qualquer outra coisa que possa fazer um relatório melhor!
@@ -40,9 +41,9 @@ Além disso, você precisará do servidor em execução localmente em sua máqui
 # Instalando
 Clonando o repositório
 
-$ git clone https://github.com/cristiano182/segredosUnifesp
+$ git clone https://github.com/cristiano182/ictApp-app
 
-$ cd segredosUnifesp
+$ cd ictApp-app
 
 Instalando dependências
 
@@ -51,7 +52,7 @@ ou
 
 $ npm install
 Conectando o aplicativo com o servidor
-1 - Siga as instruções no servidor segredosUnifesp para que o servidor esteja funcionando em sua máquina.
+1 - Siga as instruções no servidor ictApp-server para que o servidor esteja funcionando em sua máquina.
 
 2 - Com o servidor instalado e funcionando, vá para o arquivo /.env.development e edite o valor SERVER_URL para o IP da sua máquina (você pode ter alguns problemas com o localhost se você estiver rodando em um dispositivo físico android).
 
