@@ -1,5 +1,6 @@
 import { GET_DATA_FILES, GET_DATA_MESSAGES, GET_DATA_ERROR, SET_USER } from './actions'
 import axios from 'axios'
+import {SERVER_URL} from 'react-native-dotenv'
 
 export const setUser = (data) => {
     return dispatch => {
@@ -21,7 +22,7 @@ export const setUser = (data) => {
 export const getDataFiles = () => {
     return async dispatch => {
         try {
-            const res = await axios.get('http://192.168.100.15:3000/files')
+            const res = await axios.get( SERVER_URL + '/files')
             if (res.status === 201)
                 dispatch({
                     type: GET_DATA_FILES,

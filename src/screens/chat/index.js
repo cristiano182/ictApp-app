@@ -4,6 +4,7 @@ import io from 'socket.io-client'
 import dismissKeyboard from 'dismissKeyboard';
 import { getDataFiles } from '../../redux/actions/index'
 import { connect } from 'react-redux'
+import {SERVER_URL} from 'react-native-dotenv'
 
 class Chat extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Chat extends React.Component {
     this.onReceivedMessage = this.onReceivedMessage.bind(this);
     this._storeMessages = this._storeMessages.bind(this);
     this.props.dispatch(getDataFiles())
-    this.socket = io('http://192.168.56.1:3000')
+    this.socket = io(SERVER_URL)
     this.socket.on('chat', this.onReceivedMessage);
     this.determineUser();
   }

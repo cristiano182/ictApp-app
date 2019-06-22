@@ -10,7 +10,7 @@ export default styles = StyleSheet.create({
     view: {
       width: '100%',
       justifyContent: 'flex-end',
-      height: '60%',
+      height: '70%',
     },
     email: {
       flexDirection: 'row',
@@ -22,14 +22,14 @@ export default styles = StyleSheet.create({
     inputEmail: {
       borderColor: 'gray',
       width: '100%',
-      elevation: 3,
+      elevation: 1,
       borderRadius: 50,
       borderWidth: 0.5
     },
     inputEmailEmpty: {
       borderColor: 'red',
       width: '100%',
-      elevation: 3,
+      elevation: 1,
       borderRadius: 50,
       borderWidth: 0.5
     },
@@ -44,14 +44,14 @@ export default styles = StyleSheet.create({
     inputPassword: {
       borderColor: 'gray',
       width: '100%',
-      elevation: 3,
+      elevation: 1,
       borderRadius: 50,
       borderWidth: 0.5
     },
     inputPasswordEmpty: {
       borderColor: 'red',
       width: '100%',
-      elevation: 3,
+      elevation: 1,
       borderRadius: 50,
       borderWidth: 0.5
     },

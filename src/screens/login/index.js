@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import axios from 'axios'
 import { setUser } from '../../redux/actions/index'
 import SplashScreen from 'react-native-splash-screen'
-
+import { SERVER_URL } from 'react-native-dotenv'
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +29,7 @@ class Login extends Component {
 
       const { email, password } = this.state
       const user = { email, password }
-      const res = await axios.post('http://192.168.100.15:3000/user/login', user)
+      const res = await axios.post(SERVER_URL + '/user/login', user)
       if (res.status === 201) {
         this.props.dispatch(setUser(res.data))
         this.props.navigation.navigate('App')

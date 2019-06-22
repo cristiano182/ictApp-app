@@ -9,6 +9,8 @@ import { connect } from 'react-redux'
 import GDrive from "react-native-google-drive-api-wrapper";
 import AsyncStorage from '@react-native-community/async-storage';
 import getTokenDrive from '../../services/createPasteGDrive'
+import { SERVER_URL } from 'react-native-dotenv'
+import axios from 'axios'
 
 class Upload extends Component {
     constructor(props) {
@@ -16,7 +18,7 @@ class Upload extends Component {
         this.state = {
             uploadedFiles: [],
             descricao: "",
-            user:this.props.user,
+            user: this.props.user,
             error: "",
             pastaFileCurrent: "",
             id_uc: "",
@@ -27,8 +29,8 @@ class Upload extends Component {
 
     async componentDidMount() {
         getTokenDrive()
-      const pasta = AsyncStorage.getItem('@pastaFileCurrent')
-       // alert(JSON.stringify(pasta))
+        const pasta = AsyncStorage.getItem('@pastaFileCurrent')
+        // alert(JSON.stringify(pasta))
         this.setState({ pastaFileCurrent: pasta })
         this.setState({
             id_uc: this.props.navigation.state.params._id,
@@ -38,7 +40,7 @@ class Upload extends Component {
 
 
     deletePaste = async e => {
-       GDrive.files.delete(this.state.pastaFileCurrent);
+        GDrive.files.delete(this.state.pastaFileCurrent);
         this.setState({ userSendFile: true });
     };
 
@@ -64,8 +66,6 @@ class Upload extends Component {
     _sendData = async () => {
         await this.state.uploadedFiles.forEach(this.processUpload);
     }
-
-
 
     processUpload = uploadedFile => {
         var metadata = {
@@ -118,7 +118,7 @@ class Upload extends Component {
             link: this.state.pastaFileCurrent,
             descricao: this.state.descricao,
         };
-        await api.put("/files/" + this.state.id_uc, infos)
+        await axios.put(SERVER_URL + '/files/' + this.state.id_uc, infos)
             .catch(err => console.log(err));
         this.setState({ userSendFile: true });
 
@@ -137,7 +137,7 @@ class Upload extends Component {
             width: 300,
             height: 300,
         }).then(photo => {
-            this.handleUpload(photo)
+            //  this.handleUpload(photo)
         }).catch(error => alert(JSON.stringify(error)))
     }
 
@@ -145,7 +145,7 @@ class Upload extends Component {
         ImagePicker.openCamera({
             mediaType: 'video',
         }).then(video => {
-            this.handleUpload(video)
+            //  this.handleUpload(video)
         });
     }
 
@@ -231,7 +231,7 @@ class Upload extends Component {
                         <Text style={{ color: '#ddd' }}> Agora não :( </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity  onPress={ this._sendData } style={{ widht: 70, backgroundColor: 'green', borderRadius: 15 }}>
+                    <TouchableOpacity onPress={this._sendData} style={{ widht: 70, backgroundColor: 'green', borderRadius: 15 }}>
                         <Text style={{ color: '#ddd' }}>  Quero enviar :) </Text>
                     </TouchableOpacity>
 
