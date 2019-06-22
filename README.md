@@ -2,7 +2,8 @@
 Aplicativo para compartilhamento de arquivos entre alunos da Unifesp
 
 
-![Alt Text](screens.png)
+<img src="https://drive.google.com/file/d/1aIS6wHGZoPqB6vVTsnB9sZVBVKI9jBn1/view?usp=sharing" alt="preview" width="400"/>
+
 
 # Sobre este projeto
 A ideia do aplicativo é:
