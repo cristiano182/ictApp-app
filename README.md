@@ -2,7 +2,7 @@
 Aplicativo para compartilhamento de arquivos entre alunos da Unifesp
 
 
-<img src="https://github.com/cristiano182/ictApp-app/blob/master/preview.gif" alt="preview" />
+<img src="https://github.com/cristiano182/ictApp-app/blob/master/preview2.gif" alt="preview" />
 
 # Sobre este projeto
 A ideia do aplicativo é:
