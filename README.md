@@ -33,7 +33,9 @@ Instalador Android .apk : em breve !
 
 
 # Começando
+
 Pré-requisitos
+
 Para executar este projeto no modo de desenvolvimento, você precisará ter um ambiente básico para executar um aplicativo React-Native, que pode ser encontrado aqui .
 
 Além disso, você precisará do servidor em execução localmente em sua máquina com os dados simulados. Você pode encontrar o servidor e todas as instruções para iniciar o servidor aqui .
@@ -51,14 +53,20 @@ $ yarn
 ou
 
 $ npm install
+
 Conectando o aplicativo com o servidor
+
 1 - Siga as instruções no servidor ictApp-server para que o servidor esteja funcionando em sua máquina.
 
 2 - Com o servidor instalado e funcionando, vá para o arquivo /.env.development e edite o valor SERVER_URL para o IP da sua máquina (você pode ter alguns problemas com o localhost se você estiver rodando em um dispositivo físico android).
 
+
 Deve ser assim:
+
 SERVER_URL = http: // IP_OF_YOUR_MACHINE : 3000
+
 ou
+
 SERVER_URL = http: // localhost: 3000
 
 # Começando
