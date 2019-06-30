@@ -1,5 +1,5 @@
 # ictapp
-Aplicativo para compartilhamento de arquivos entre alunos da Unifesp
+Aplicativo para compartilhamento de arquivos
 
 
 <img src="https://github.com/cristiano182/ictApp-app/blob/master/preview2.gif" alt="preview" />
@@ -7,7 +7,7 @@ Aplicativo para compartilhamento de arquivos entre alunos da Unifesp
 # Sobre este projeto
 A ideia do aplicativo é:
 
-"Possibilitar compartilhamento de arquivos, listas de exercicios, livros em formato pdf images etc, entre alunos da ICT-UNIFESP".
+"Possibilitar compartilhamento de arquivos, listas de exercicios, livros em formato pdf images etc".
 
 PS: Todo o código pode ser reutilizado para qualquer outro aplicativo que reproduz salas de chat, upload de arquivos(fotos, videos),
 você pode reutilizar para qualquer outra ideia dentro deste contexto!
@@ -57,9 +57,9 @@ Conectando o aplicativo com o servidor
 2 - Com o servidor instalado e funcionando, vá para o arquivo /.env.development e edite o valor SERVER_URL para o IP da sua máquina (você pode ter alguns problemas com o localhost se você estiver rodando em um dispositivo físico android).
 
 Deve ser assim:
-SERVER_URL = http: // IP_OF_YOUR_MACHINE : 3001 / mind-cast / api / v1
+SERVER_URL = http: // IP_OF_YOUR_MACHINE : 3000
 ou
-SERVER_URL = http: // localhost: 3001 / mind-cast / api / v1
+SERVER_URL = http: // localhost: 3000
 
 # Começando
 Com todas as dependências instaladas e o ambiente configurado corretamente, agora você pode executar o aplicativo:
